@@ -17,3 +17,22 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<table class="table table-striped">
+    <tr>
+        <td><b>Date</b></td>
+        <td><b>Title</b></td>
+        <td><b>Amount</b></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <% @balances.each do |balance| %>
+    <tr>
+        <td><%= balance.date %></td>
+        <td><%= balance.title %></td>
+        <td><%= balance.amount %></td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <% end %>
+</table>
+

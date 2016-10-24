@@ -3,7 +3,8 @@ class CreateBalances < ActiveRecord::Migration
     create_table :balances do |t|
       t.text :title
       t.integer :amount
-      t.timestamps null: true
+      t.date :date
+      t.timestamps null: false
     end
   end
 end

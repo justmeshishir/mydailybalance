@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20161024155245) do
   create_table "balances", force: :cascade do |t|
     t.text     "title"
     t.integer  "amount"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
