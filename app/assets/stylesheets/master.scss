@@ -1,0 +1,21 @@
+$primary-font: 'Lobster Two', cursive;
+$secondary-font: 'Cormorant Garamond', serif;
+
+html, body
+{
+    font-family: $secondary-font;
+    margin: 0px;
+}
+
+.navbar-default{
+    background-color: black;
+    font-size: 18px;
+    height:55px;
+}
+
+.navbar-brand
+{
+    font-family: $primary-font;
+    font-size: 24px;
+}
+
