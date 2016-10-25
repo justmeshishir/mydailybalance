@@ -1,27 +1,4 @@
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">myDailyBalance</a>
-    </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
-  New Record
-</button></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
-
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -33,7 +10,7 @@
         <%= simple_form_for (@balance) do |f| %>
           <%= f.input :title %>
           <%= f.input :amount %>
-          <%= f.input :date, as: :date, start_year: Date.today.year,
+          <%= f.input :date, as: :date, start_year: Date.today.year - 10,
                                       end_year: Date.today.year, discard_day: false,
                               order: [:day, :month, :year] %>
           
