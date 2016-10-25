@@ -1,4 +1,4 @@
-class BalanceController < ApplicationController
+class BalancesController < ApplicationController
     def index
         @balances = Balance.all
     end
