@@ -61,8 +61,8 @@
         <td><%= balance.date %></td>
         <td><%= balance.title %></td>
         <td><%= balance.amount %></td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td><%= link_to 'Edit', edit_balance_path(balance), class: 'btn btn-sm btn-warning', title:'Edit' %></td>
+        <td><%= link_to 'Delete', balance_path(balance), method: :delete, class: 'btn btn-sm btn-danger', title:'Delete', data: {confirm: "Are you sure?"} %></td>
     </tr>
     <% end %>
 </table>
