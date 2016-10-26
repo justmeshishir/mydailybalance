@@ -25,22 +25,9 @@
   </div>
 </div>
 <div class="container">
-  <% 
-  balance_sum =0
-  balance_debt = 0
-  total = 0
-  @balances.each do |balance|
-    if balance.amount > 0
-      balance_sum+=balance.amount
-    elsif balance.amount <0
-      balance_debt+=balance.amount
-    end
-  end
-  total = balance_sum + balance_debt
-  %>
-    <h3>Balance: <%= balance_sum %></h3>
-    <h3>Debt: <%= balance_debt %></h3>
-    <h2>Total: <%= total %></h2>
+    <h3>Balance: <%= @balance_sum %></h3>
+    <h3>Debt: <%= @balance_debt %></h3>
+    <h2>Total: <%= @total %></h2>
     <br /><br />
   <table class="table table-hover">
       <tr>
