@@ -2,6 +2,9 @@ class BalancesController < ApplicationController
     def index
         @balances = Balance.all
         @balance = Balance.new
+        @balance_debt = @balances.debt
+        @balance_sum = @balances.balance
+        @total = @balances.total
     end
     def create
         @create_balance = Balance.create(balance_params)
@@ -35,12 +38,6 @@ class BalancesController < ApplicationController
         redirect_to root_path
     end
     
-    def record
-        @records = Record.all
-        @balance_debt = @records.debt
-        @balance_sum = @records.balance
-        @total = @records.total
-    end
     private
     def balance_params
         params.require(:balance).permit(:title, :amount, :date)
